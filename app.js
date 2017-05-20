@@ -15,5 +15,5 @@ var server = http.listen(porta, function() {
     var host = server.address().address;
     var port = server.address().port;
 
-    console.log('Servidor rodando em http://%s:%s', host, porta);
+    console.log('Servidor rodando em http://%s:%s', host, port);
 });
