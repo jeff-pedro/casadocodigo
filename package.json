@@ -3,9 +3,6 @@
     "version": "1.0.0",
     "description": "site da casa do codigo",
     "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
     "author": "jefferson",
     "license": "ISC",
     "dependencies": {
@@ -24,6 +21,7 @@
         "node": "6.10.3"
     },
     "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
         "start": "node app"
     }
 }
