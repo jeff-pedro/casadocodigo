@@ -21,6 +21,19 @@ function createDBConnection() {
             database: 'casadocodigo_test'
         });
     }
+
+    if (process.env.NODE_ENV == 'production') {
+
+        var url = process.env.CLEARDB_DATABASE_URL;
+        var grupos = url.match( /mysql:\/\/(.*):(.*)@(.*)\/(.*)?reconnect=true/);
+
+        return mysql.createConnection({
+            host: grupos[3],
+            user: grupos[1],
+            password: grupos[2],
+            database: grupos[4]
+        });
+    }
 }
 
 // exporta como módulo de conexão com o banco
